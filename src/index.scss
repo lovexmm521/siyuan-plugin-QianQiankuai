@@ -1,0 +1,30 @@
+// 你可以在这里为你的插件添加自定义样式
+// 例如，让顶栏图标的颜色更有爱意
+.b3-topbar__item .icon[data-v-a9775f04] {
+  svg {
+    // 当鼠标悬浮时，图标变为浪漫的粉色
+    &:hover {
+      color: #e91e63;
+    }
+  }
+}
+
+/* 新的样式规则
+  我们使用属性选择器 [data-name="romantic-menu"] 来精确定位我们的菜单
+*/
+.b3-menu[data-name="romantic-menu"] {
+  // 移除菜单项的默认内边距，因为我们的自定义元素会自己处理
+  .b3-menu__item {
+    padding: 0;
+  }
+
+  // 这是我们自定义的菜单项容器的样式
+  .romantic-menu-item {
+    display: flex;         // 使用 flex 布局
+    align-items: center;   // 垂直居中
+    width: 100%;           // 占满父容器宽度
+    padding: 6px 12px;     // 添加我们自己的内边距
+    box-sizing: border-box;// 确保内边距不会撑开宽度
+  }
+}
+

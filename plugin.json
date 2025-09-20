@@ -1,0 +1,47 @@
+{
+  "name": "siyuan-plugin-QianQiankuai",
+  "author": "小海盐芝士",
+  "url": "https://github.com/lovexmm521/siyuan-plugin-QianQiankuai",
+  "version": "1.0.0",
+  "minAppVersion": "3.1.27",
+  "backends": [
+    "all"
+  ],
+  "frontends": [
+    "all"
+  ],
+  "disabledInPublish": false,
+  "displayName": {
+    "default": "QianQian Block (Custom Block CSS + JS)",
+    "zh_CN": "千千块（自定义块css＋js）"
+  },
+  "description": {
+    "default": "A plugin that allows you to customize block CSS and JS.",
+    "zh_CN": "一款可以自定义块css＋js的插件"
+  },
+  "readme": {
+    "default": "README.md",
+    "zh_CN": "README_zh_CN.md"
+  },
+  "funding": {
+    "custom": [
+      "https://afdian.com/a/QianQian517"
+    ]
+  },
+  "keywords": [
+    "css",
+    "js",
+    "javascript",
+    "code",
+    "snippet",
+    "style",
+    "script",
+    "custom",
+    "block",
+    "千千块",
+    "自定义",
+    "自定义块",
+    "代码片段"
+  ]
+}
+
