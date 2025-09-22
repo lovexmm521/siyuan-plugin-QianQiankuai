@@ -2,7 +2,7 @@
   "name": "siyuan-plugin-QianQiankuai",
   "author": "小海盐芝士",
   "url": "https://github.com/lovexmm521/siyuan-plugin-QianQiankuai",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "3.1.27",
   "backends": [
     "all"
@@ -17,7 +17,7 @@
   },
   "description": {
     "default": "A plugin that allows you to customize block CSS and JS.",
-    "zh_CN": "一款可以自定义块css＋js的插件"
+    "zh_CN": "一款可以自定义块css＋js的插件，为任意内容块注入自定义的 CSS 样式和 JS 脚本。\n千千插件QQ交流群：680418924"
   },
   "readme": {
     "default": "README.md",
