@@ -1,15 +1,20 @@
 # QianQian Block (Custom Block CSS + JS)
 
-This is a powerful plugin for SiYuan Note that allows you to inject custom CSS styles and JavaScript scripts into any content block.
+This is a powerful plugin for SiYuan Note that allows you to inject custom CSS styles, JavaScript scripts, and the new **real-time HTML block editing** feature into any content block through simple block attributes or a convenient menu.
 
-Whether you want to fine-tune the style of a specific block or add unique interactive features, "QianQian Block" makes it easy.
+Whether you want to fine-tune the style of a block, add unique interactive features, or directly modify the structure of an HTML block, "QianQian Block" makes it easy.
+
+## 💗 Release Notes
+
+**v1.0.5 adds the real-time HTML block editing feature. (Note: Please avoid rapid consecutive key presses. If a block is accidentally deleted, use Ctrl+Z to restore it.)**
 
 ## ✨ Features
 
+- **Real-time HTML Block Editing**: Click directly into any HTML block to start editing its content live. It's a true WYSIWYG experience with features like automatic cursor restoration, focus lock, and rapid input protection to ensure stability.
 - **Convenient Menu Editor**: Click the block icon to the left of any block to directly find and use the "Custom Block CSS" and "Custom Block JS" options in the context menu for real-time editing, saying goodbye to the cumbersome attribute panel workflow.
 - **Custom Block CSS**: Beautify your notes in real-time by adding a `css` attribute to a block and writing CSS rules directly.
 - **Custom Block JS**: Inject JavaScript code into blocks via the `js` attribute to implement dynamic interactions, data processing, and other advanced features.
-- **Smart Toggles**: Independent master switches for CSS and JS functionalities are provided in the top bar for easy management.
+- **Smart Toggles**: Independent master switches for Custom Block CSS, JS, and Real-time HTML Editing functionalities are provided in the top bar for easy management.
 - **Real-time Application**  **&amp;**  **Cleanup**: Both CSS and JS are applied in real-time as you modify them. The plugin automatically cleans up injected styles and scripts when you clear the code or turn off the master switch, ensuring no side effects.
 - **Advanced JS Cleanup Mechanism**: For complex JS operations (like adding event listeners or timers), you can `return` a cleanup function to define the script's behavior upon termination, ensuring robustness.
 
