@@ -6,7 +6,7 @@ Whether you want to fine-tune the style of a block, add unique interactive featu
 
 ## 💗 Release Notes
 
-**v1.0.5 adds the real-time HTML block editing feature. (Note: Please avoid rapid consecutive key presses. If a block is accidentally deleted, use Ctrl+Z to restore it.)**
+**v1.0.6 adds the real-time HTML block editing feature. (Note: Please avoid rapid consecutive key presses. If a block is accidentally deleted, use Ctrl+Z to restore it.)**
 
 ## ✨ Features
 
