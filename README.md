@@ -1,15 +1,16 @@
 # QianQian Block (Custom Block CSS + JS)
 
-This is a powerful plugin for SiYuan Note that allows you to inject custom CSS styles, JavaScript scripts, and the new **real-time HTML block editing** feature into any content block through simple block attributes or a convenient menu.
-
-Whether you want to fine-tune the style of a block, add unique interactive features, or directly modify the structure of an HTML block, "QianQian Block" makes it easy.
+This is a powerful plugin for SiYuan Note that allows you to inject custom CSS styles, JavaScript scripts, and the new **real-time HTML block editing** feature into any content block through simple block attributes or a convenient menu, and it also integrates a powerful **AI Sidebar** with multiple large AI models.
 
 ## 💗 Release Notes
+
+**v1.1.0 Adds the AI Sidebar, integrating multiple large AI models and a one-stop AI navigation hub (Note: Use Ctrl+C and Ctrl+V for copy-paste).**
 
 **v1.0.6 adds the real-time HTML block editing feature. (Note: Please avoid rapid consecutive key presses. If a block is accidentally deleted, use Ctrl+Z to restore it.)**
 
 ## ✨ Features
 
+- **AI Sidebar**: Quickly launch a powerful AI assistant on the right side of SiYuan Note. It integrates multiple large AI models, easily switchable via a dropdown menu, allowing you to seamlessly use AI services within your notes.
 - **Real-time HTML Block Editing**: Click directly into any HTML block to start editing its content live. It's a true WYSIWYG experience with features like automatic cursor restoration, focus lock, and rapid input protection to ensure stability.
 - **Convenient Menu Editor**: Click the block icon to the left of any block to directly find and use the "Custom Block CSS" and "Custom Block JS" options in the context menu for real-time editing, saying goodbye to the cumbersome attribute panel workflow.
 - **Custom Block CSS**: Beautify your notes in real-time by adding a `css` attribute to a block and writing CSS rules directly.
@@ -37,26 +38,47 @@ Change the text color to red and add a left border.
 
 ### Custom JS Example
 
-Log the block's ID to the console when it's clicked.
+Show the block's ID via a notification when clicked.
 
 - **Attribute Name**: `js`
-- **Attribute Value**: `this.addEventListener('click', () => { console.log(this.getAttribute('data-node-id')); });`
+- **Attribute Value**:
+
+```
+this.addEventListener('click', () => {
+  fetch('/api/notification/pushMsg', {
+    method: 'POST',
+    body: JSON.stringify({
+      msg: 'Block ID is: ' + this.getAttribute('data-node-id'),
+      timeout: 3000,
+    }),
+  });
+});
+
+```
 
 **Advanced Usage:**  For JS that requires cleanup (like `addEventListener` or `setInterval`), you can return a function to perform the cleanup.
 
 - **Attribute Value**:
 
-  ```
-  const handleClick = () => console.log('Block was clicked');
-  this.addEventListener('click', handleClick);
+```
+const handleClick = () => {
+  fetch('/api/notification/pushMsg', {
+    method: 'POST',
+    body: JSON.stringify({ msg: 'Block was clicked', timeout: 3000 }),
+  });
+};
+this.addEventListener('click', handleClick);
 
-  // Return a cleanup function
-  return () => {
-    this.removeEventListener('click', handleClick);
-    console.log('Event listener removed');
-  };
+// Return a cleanup function
+return () => {
+  this.removeEventListener('click', handleClick);
+  fetch('/api/notification/pushMsg', {
+    method: 'POST',
+    body: JSON.stringify({ msg: 'Event listener removed', timeout: 3000 }),
+  });
+};
 
-  ```
+```
 
 ## ❤️ Support the Author
 
