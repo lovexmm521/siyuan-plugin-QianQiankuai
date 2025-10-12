@@ -2,7 +2,7 @@
   "name": "siyuan-plugin-QianQiankuai",
   "author": "小海盐芝士",
   "url": "https://github.com/lovexmm521/siyuan-plugin-QianQiankuai",
-  "version": "1.1.12",
+  "version": "1.1.14",
   "minAppVersion": "3.1.27",
   "backends": [
     "all"
