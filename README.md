@@ -4,6 +4,8 @@ This is a powerful plugin for SiYuan Note that allows you to inject custom CSS s
 
 ## 💗 Release Notes
 
+**Adds AI Platform API Interface, Prompt Optimizer, n8n and Dify Workflows (Note: n8n defaults to local port 5678)**
+
 **v1.1.0 Adds the AI Sidebar, integrating multiple large AI models and a one-stop AI navigation hub (Note: Use Ctrl+C and Ctrl+V for copy-paste).**
 
 **v1.0.6 adds the real-time HTML block editing feature. (Note: Please avoid rapid consecutive key presses. If a block is accidentally deleted, use Ctrl+Z to restore it.)**
