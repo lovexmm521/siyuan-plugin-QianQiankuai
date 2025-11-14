@@ -1,6 +1,6 @@
-# QianQian Block (Custom Block CSS + JS)
+# QianQian AI Block (Custom Block CSS + JS)
 
-This is a powerful plugin for SiYuan Note that allows you to inject custom CSS styles, JavaScript scripts, and the new **real-time HTML block editing** feature into any content block through simple block attributes or a convenient menu, and it also integrates a powerful **AI Sidebar** with multiple large AI models.
+This is a powerful plugin for SiYuan Note that allows you to inject custom CSS styles, JavaScript scripts, 和 the new **real-time HTML block editing** feature into any content block through simple block attributes or a convenient menu, and it also integrates a powerful **AI Sidebar** with multiple large AI models.
 
 ## 💗 Release Notes
 
