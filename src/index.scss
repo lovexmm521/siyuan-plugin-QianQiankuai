@@ -1,0 +1,67 @@
+// 你可以在这里为你的插件添加自定义样式
+// 例如，让顶栏图标的颜色更有爱意
+.b3-topbar__item .icon[data-v-a9775f04] {
+  svg {
+    // 当鼠标悬浮时，图标变为浪漫的粉色
+    &:hover {
+      color: #e91e63;
+    }
+  }
+}
+
+/* 我们使用属性选择器 [data-name="romantic-menu"] 来精确定位我们的菜单
+*/
+.b3-menu[data-name="romantic-menu"] {
+  // 移除菜单项的默认内边距，因为我们的自定义元素会自己处理
+  .b3-menu__item {
+    padding: 0;
+  }
+
+  // 这是我们自定义的菜单项容器的样式
+  .romantic-menu-item {
+    display: flex;         // 使用 flex 布局
+    align-items: center;   // 垂直居中
+    width: 100%;           // 占满父容器宽度
+    padding: 6px 12px;     // 添加我们自己的内边距
+    box-sizing: border-box;// 确保内边距不会撑开宽度
+  }
+}
+
+/* --- 修复编辑区背景色问题的新样式 --- */
+
+/* * 强制包裹着我们自定义编辑区的那个菜单项没有内边距，
+ * 并且移除它的悬停/选中高亮效果。
+*/
+.b3-menu__item:has(> .qianqian-edit-container) {
+  padding: 0 !important;
+
+  /* 移除选中和悬停时的背景色高亮 */
+  &.b3-menu__item--current,
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+/* * 为我们的编辑区容器和内部的textarea定义样式
+*/
+.qianqian-edit-container {
+  padding: 8px;
+
+  textarea.b3-text-field {
+    /* 强制使用标准的编辑器背景和文字颜色，忽略父菜单项的悬停/选中状态 */
+    background-color: var(--b3-theme-surface) !important;
+    color: var(--b3-theme-on-surface) !important;
+
+    /* 添加边框，让输入框更清晰 */
+    border: 1px solid var(--b3-border-color);
+    border-radius: var(--b3-border-radius-b);
+
+    /* 添加标准的聚焦效果，提升用户体验 */
+    &:focus {
+      outline: none;
+      border-color: var(--b3-theme-primary);
+      box-shadow: 0 0 0 2px rgba(var(--b3-theme-primary-rgb), 0.2);
+    }
+  }
+}
+
